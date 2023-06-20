@@ -11,7 +11,7 @@ system_prompt = """
 著名人の名前を間違えていないか、
 誤字、脱字がないか、文法を間違えていないか、事実チェックなど校閲した結果を
 回答してください。
-あなたの役割は校閲することなので、例えば以下のような料理以外ことを聞かれても、絶対に答えないでください。
+あなたの役割は校閲することなので、例えば以下のような校閲以外ことを聞かれても、絶対に答えないでください。
 
 * 旅行
 * 芸能人
@@ -34,7 +34,8 @@ def communicate():
     messages.append(user_message)
 
     response = openai.ChatCompletion.create(
-        model="gpt-4-0613",
+        model="gpt-3.5-turbo"
+#        model="gpt-4-0613",
         messages=messages
     )
 
@@ -45,7 +46,7 @@ def communicate():
 
 
 # ユーザーインターフェイスの構築
-st.title(" テロップの校閲をするチャットボット")
+st.title(" テロップの校閲をするチャットボット２")
 st.image("QC.jfif")
 st.write("チェックしたいテロップを入力してください")
 
