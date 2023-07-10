@@ -46,7 +46,7 @@ def communicate():
 
 
 # ユーザーインターフェイスの構築
-st.title(" テロップの校閲をするチャットボット２")
+st.title(" テロップの校閲をするチャットボット２ GTP4利用")
 st.image("QC.jfif")
 st.write("チェックしたいテロップを入力してください")
 
